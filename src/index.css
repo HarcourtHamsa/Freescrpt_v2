@@ -1,19 +1,14 @@
+html,
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
-*{
-  font-family: 'Inter', sans-serif; 
+* {
+  font-family: "Space Grotesk", sans-serif;
   box-sizing: border-box;
-  white-space: pre-wrap;
 }

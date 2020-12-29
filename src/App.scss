@@ -1,33 +1,34 @@
-@import './_variables';
+@import "./_variables";
 
-main, section{
+main,
+section {
   @include container();
   margin-top: 5rem !important;
 
-  #info p:first-child{
+  #info p:first-child {
     float: left;
     margin-right: 1rem;
   }
 
-  #info{
+  #info {
     padding: 1rem;
     background-color: whitesmoke;
     border-radius: 5px;
     border: 2px solid rgb(221, 221, 221);
   }
 
-  h1{
+  h1 {
     font-weight: 900;
     font-size: 2.5rem;
   }
 
-   h2{
+  h2 {
     white-space: pre-wrap;
     font-size: 1.25rem;
     font-weight: 700;
   }
 
-  h2::after{
+  h2::after {
     content: "";
     display: block;
     width: 100%;
@@ -35,30 +36,101 @@ main, section{
     background-color: whitesmoke;
   }
 
-  a{
-    color: gray;
-    margin-left: .5rem;
+  a {
+    color: goldenrod;
+    margin-left: 0.5rem;
   }
 
-  button{
-    padding: .5rem;
+  button {
+    padding: 0.5rem;
     border-radius: 5px;
     border: 2px solid whitesmoke;
   }
 
-  #row{
+  #row {
     display: flex;
     justify-content: space-between;
   }
 }
 
+.shadow {
+  box-shadow: 2px 2px 1px 8px whitesmoke;
+}
 
+#project-grid {
+  height: 100vh;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-areas:
+    "box1 box1 box2 box2"
+    "box1 box1 box2 box2"
+    "box1 box1 box3 box3"
+    "box1 box1 box3 box3"
+    "box4 box4 box4 box4"
+    "box4 box4 box4 box4"
+    "box4 box4 box4 box4"
+    "box4 box4 box4 box4";
 
-@media only screen and (max-width: 670px){
-  main, section{
+  div {
+    position: relative;
+    
+    .tile {
+      font-size: smaller;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      font-weight: 600;
+      color: black;
+    }
+  }
+
+  #box1 {
+    grid-area: box1;
+    background-color: whitesmoke;
+    background: url(./img/ip-address-tracker.jpg) no-repeat center;
+    background-size: cover;
+  }
+  #box2 {
+    grid-area: box2;
+    background-color: whitesmoke;
+    background: url(./img/intro-signup.jpg) no-repeat center;
+    background-size: cover;
+  
+  }
+  #box3 {
+    grid-area: box3;
+    background-color: whitesmoke;
+    background: url(./img/djs.PNG) no-repeat center;
+    background-size: cover;
+    
+  }
+  #box4 {
+    grid-area: box4;
+    background-color: whitesmoke;
+    background: url(./img/juniorDev.PNG) no-repeat center;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  main,
+  section {
     width: 100%;
-    #row{
+    #row {
       flex-direction: column;
+    }
+  }
+
+  #project-grid {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    div {
+      display: block;
+      height: 30vh;
     }
   }
 }

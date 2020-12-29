@@ -22,7 +22,7 @@ function App() {
           <a href='https://reactjs.org/'>React</a>, <a href="https://gulpjs.com/docs/en/getting-started/quick-start/">Gulp</a>,
           <a href='https://nodejs.org/en/'>Node.js</a> </p>
 
-            <details open={false}>
+            <details open={true}>
               <summary>
                 Let's connect
           </summary>
@@ -34,7 +34,7 @@ function App() {
             </details>
           </main>
 
-          <section>
+          <section id="about">
             <h2>About Me</h2>
             <p>
               My name is Hamsa Harcourt, also called Freescript. I'm a Frontend Engineer enthusiastic about accessibility on the web. I am currently an author at <a href="https://www.a11yproject.com/">a11yProject.com</a> where I
@@ -50,7 +50,7 @@ function App() {
             </div>
           </section>
 
-          <section>
+          <section id="writing">
             <h2>Featured Articles</h2>
             <div id="row">
               <Card title="Introduction to the Web Accessibility Initiative" date="October 2, 2020" url="https://www.a11yproject.com/posts/2020-10-02-introduction-to-wai/" />
@@ -58,8 +58,25 @@ function App() {
             </div>
           </section>
 
+          <section id="projects">
+            <h2>Projects</h2>
+            <div id="project-grid">
+              <div id="box1">
+                <a href="https://ip-address-tracker-p52ppl092.vercel.app" rel="noreferrer" target="_blank" className="tile">visit website</a>
+              </div>
+              <div id="box2">
+                <a href="https://landing-page-roan.vercel.app/" target="_blank" rel="noreferrer" className="tile">visit website</a>
+              </div>
+              <div id="box3">
+                <a href="https://www.donjohnshipping.com" rel="noreferrer" target="_blank" className="tile">visit website</a>
+              </div>
+              <div id="box4">
+                <a href="https://junior-dev.vercel.app" target="_blank" rel="noreferrer" className="tile">visit website</a>
+              </div>
+            </div>
+          </section>
 
-          <section>
+          <section id="contact">
             <h2>Get In Touch</h2>
             <div>
               <p>I am always interested in fun projects and activities,

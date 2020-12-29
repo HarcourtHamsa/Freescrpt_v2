@@ -1,14 +1,71 @@
-nav{
-    display: flex;
-    justify-content: space-between;
-    padding:  1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
 
-    #logo{
-        color: black;
+  #nav-links {
+    a {
+      text-decoration: none;
+      color: black;
+      margin-right: 2rem;
     }
+
+    a:hover {
+      color: goldenrod;
+    }
+  }
+
+  #hamburger-menu {
+    cursor: pointer;
+    display: none;
+
+    .line {
+      width: 30px;
+      height: 2px;
+      background-color: black;
+      margin: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  nav {
+    #hamburger-menu {
+      display: block;
+      z-index: 10;
+    }
+
+    #nav-links {
+      display: none;
+      background-color: goldenrod;
+
+      a {
+        margin: 0;
+      }
+
+      #cv-btn {
+        padding: 0 1rem;
+      }
+    }
+
+    #nav-links.open {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      a {
+        display: block;
+        line-height: 4;
+      }
+    }
+  }
 }
